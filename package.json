@@ -2,6 +2,9 @@
 	"name": "ambilab-2024-sveltekit",
 	"version": "0.0.1",
 	"private": false,
+	"engines": {
+		"node": ">=18.18.0"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
