@@ -1,17 +1,15 @@
-import svelte from 'eslint-plugin-svelte';
+import js from '@eslint/js';
+import svelteParser from 'svelte-eslint-parser';
 
 export default [
+	js.configs.recommended,
 	{
-		files: ['**/*.svelte'],
-		processor: 'svelte/svelte',
+		ignores: ['.svelte-kit/**']
+	},
+	{
+		files: ['**/*.svelte', '*.svelte'],
 		languageOptions: {
-			ecmaVersion: 2022,
-			sourceType: 'module'
-		},
-		plugins: {
-			svelte: svelte
-		},
-		rules: {},
-		ignores: []
+			parser: svelteParser
+		}
 	}
 ];
